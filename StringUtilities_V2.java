@@ -201,14 +201,15 @@ class StringUtilities_V2
   
   // Method to count words in a string (Compeleted, Denzel)
   public static void countWords (String userInput) {
-      int wordCount = 0;
-      System.out.println("Running count words utility...");
-      String[] wordCounter = userInput.split("\\s+");
-      for (int c = 0; c < wordCounter.length; c++)
+    System.out.println("Running count letters utility...");
+    int wordCount = 0;
+    System.out.println("Running count words utility...");
+    String[] wordCounter = userInput.split("\\s+");
+    for (int c = 0; c < wordCounter.length; c++)
       {
         if (wordCounter[c].matches("[a-zA-Z]{2,}|[aA]{1}|[a-zA-Z]{2,}[!.()&]"))
         {
-          wordCount++; 
+            wordCount++; 
         }
       }
       System.out.println("This String contains " + wordCount + " possible words.");
@@ -218,6 +219,7 @@ class StringUtilities_V2
   
   // Method to capitalize all words in a string (Completed, Yassine)
   public static void capitalizeWords (String userInput) {
+    System.out.println("Running capitalize letter utility...");
     String [] userStatement = userInput.split("\\s"); //the statement will only split when there's a space because of "\\s"
     userInput = "";
     for (int i=0; i<userStatement.length; i++){ //For loop created to read the length of each word in the statement.
@@ -230,6 +232,7 @@ class StringUtilities_V2
   
   // Method to reverse the statement entirely (Completed, Yassine)
   public static void reverseStatement (String userInput) {
+    System.out.println("Running reverse statement utility...");
      String inputReversed;
     inputReversed = "";
     for (int i=(userInput.length()-1); i>=0; i--) {
@@ -240,6 +243,7 @@ class StringUtilities_V2
   
   // Method to reverse the letters in each word entirely but keep the words in the right order (Completed, Nabeel)
   public static void reverseLetters (String userInput) {
+    System.out.println("Running reverse letters utility...");
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     System.out.println("The reversed letters in each word for the statement would be.");
     for (int i=0; i<arrayLength; i++) {
@@ -254,6 +258,7 @@ class StringUtilities_V2
   
   // Method to reverse the words in each statement but keep the words' letters in the right order (Completed, Nabeel)
   public static void reverseWords (String userInput) {
+    System.out.println("Running reverse words utility...");
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     System.out.println("The reversed words for the statement would be.");
     for (int i=(arrayLength - 1); i>=0; i--) {
@@ -265,6 +270,7 @@ class StringUtilities_V2
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Completed, Nabeel)
   public static void alternateCase (String userInput) {
+    System.out.println("Running alternate case utility...");
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     for (int i=0; i<userInput.length(); i++) {
       if (userInput.charAt(i) >= 97 && userInput.charAt(i) <= 122 || userInput.charAt(i) >= 65 && userInput.charAt(i) <= 90) {
@@ -284,6 +290,7 @@ class StringUtilities_V2
   
   // Method to analyze the statement and output the number of times a letter is a present (Completed, Nabeel)
   public static void letterFrequency (String userInput) {
+    System.out.println("Running letter frequency utility...");
     int lowerLetterFreq[] = new int[26]; // Array of ints for the number of times a lowercase letter is seen (0=a,...,etc)
     int upperLetterFreq[] = new int[26]; // Array of ints for the number of times an uppercase letter is seen (0=A,...,etc)
     // For loop for uppercase letters with selection statements to find freq
@@ -467,6 +474,7 @@ class StringUtilities_V2
   
   // Method to analyze the statement and determine how many consonants and how many vowels there are (Completed, Denzel)
   public static void consOrVowel (String userInput) {
+    System.out.println("Running consonant or vowels utility...");
     int spaceCount = 0;
     int punCount = 0;
     int consCount = 0;
